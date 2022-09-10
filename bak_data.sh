@@ -10,6 +10,6 @@ if [ "$(date "+%u")" == "1" ];then
 fi
 
 # 备份到github仓库
-git add --all
+git add .
 git commit -m "backup files"
 git push origin main
