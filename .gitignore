@@ -1,0 +1,6 @@
+logs
+ssl
+data/hugo
+data/mysql
+data/redis
+data/wordpress
