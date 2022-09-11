@@ -2,6 +2,24 @@ version: '3.1'
 
 services:
 
+  twikoo:
+    image: imaegoo/twikoo
+    container_name: twikoo
+    restart: always
+    networks:
+      wordpress_net:
+        ipv4_address: 172.19.0.8
+    ports:
+      - 8080:8080
+    environment:
+      TWIKOO_THROTTLE: 1000
+    volumes:
+      - /usr/share/zoneinfo/Asia/Shanghai:/etc/localtime:ro
+      - $PWD/data/twikoo:/app/data
+    depends_on:
+      - proxy
+    
+
   proxy: # 前端代理nginx
     image: superng6/nginx:debian-stable-1.18.0
     container_name: nginx-proxy
@@ -20,6 +38,7 @@ services:
       - $PWD/logs/proxy:/var/log/nginx
     depends_on:
       - web
+      - hugo
 
   web: # wordpress的nginx
     image: superng6/nginx:debian-stable-1.18.0
