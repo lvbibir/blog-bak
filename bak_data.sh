@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# 重复执行某个命令，直至成功，间隔30秒
+repeat() { while :; do $@ && return; sleep 30; done }
+
 # 获取脚本文件所在目录的绝对路径
 script_path=$(cd $(dirname ${0}); pwd) 
 
@@ -13,4 +16,4 @@ fi
 cd ${script_path}
 git add .
 git commit -m "backup files"
-git push origin main
+repeat git push origin main
