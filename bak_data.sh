@@ -14,6 +14,6 @@ fi
 
 # 备份到github仓库
 cd ${script_path}
-git add .
-git commit -m "backup files"
+/usr/local/git/bin/git add .
+/usr/local/git/bin/git commit -m "backup files"
 repeat git push origin main
