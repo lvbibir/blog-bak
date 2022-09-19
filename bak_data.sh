@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "#############$(date "+%Y-%m-%d %H:%M:%S")#############"
+
 # 重复执行某个命令，直至成功，间隔30秒
 repeat() { while :; do $@ && return; sleep 30; done }
 
