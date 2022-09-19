@@ -4,3 +4,10 @@
 # 备份策略
 wordpress的数据太大，每周备份一次
 其余数据每天备份，采用linux的crontab配合shell脚本实现
+
+# crontab
+
+```
+[root@lvbibir ~]# crontab -l
+0 23 * * * /usr/bin/sh /root/blog/bak_data.sh >> /var/log/baklog 2>&1
+```
