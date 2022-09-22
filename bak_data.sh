@@ -18,4 +18,4 @@ fi
 cd ${script_path}
 /usr/local/git/bin/git add .
 /usr/local/git/bin/git commit -m "backup files"
-repeat git push origin main
+repeat /usr/local/git/bin/git push origin main
