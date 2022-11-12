@@ -11,3 +11,5 @@ wordpress的数据太大，每周备份一次
 [root@lvbibir ~]# crontab -l
 0 23 * * * /usr/bin/sh /root/blog/bak_data.sh >> /var/log/baklog 2>&1
 ```
+
+测试提交
