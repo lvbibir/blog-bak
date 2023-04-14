@@ -38,7 +38,7 @@ services:
     volumes:
       - /usr/share/zoneinfo/Asia/Shanghai:/etc/localtime:ro
       - $PWD/data/twikoo:/app/data
-      - $PWD/conf/twikoo/image.js:/app/node_modules/twikoo-func/utils/image.js
+    #  - $PWD/conf/twikoo/image.js:/app/node_modules/twikoo-func/utils/image.js
 
   nginx-hugo: 
     image: superng6/nginx:debian-stable-1.18.0
