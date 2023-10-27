@@ -2,8 +2,7 @@
 用于备份我的私有云环境中的各项服务配置文件及关键数据
 
 # 备份策略
-wordpress的数据太大，每周备份一次
-其余数据每天备份，采用linux的crontab配合shell脚本实现
+每天备份，采用linux的crontab配合shell脚本实现
 
 # crontab
 
