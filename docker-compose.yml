@@ -58,6 +58,14 @@ services:
       blog_net:
         ipv4_address: 172.19.0.5
 
+  pandownload:
+    image: yuantuo666/baiduwp-php:4.0.2
+    container_name: pandownload
+    restart: always
+    networks:
+      blog_net:
+       ipv4_address: 172.19.0.6
+
 networks:
   blog_net:
     driver: bridge
