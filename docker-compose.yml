@@ -50,14 +50,6 @@ services:
       - /usr/share/zoneinfo/Asia/Shanghai:/etc/localtime:ro
       - $PWD/data/twikoo:/app/data
 
-  reference:
-    image: wcjiang/reference:1.40.0
-    container_name: reference
-    restart: always
-    networks:
-      blog_net:
-        ipv4_address: 172.19.0.5
-
 networks:
   blog_net:
     driver: bridge
