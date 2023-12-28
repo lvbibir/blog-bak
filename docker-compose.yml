@@ -50,6 +50,17 @@ services:
       - /usr/share/zoneinfo/Asia/Shanghai:/etc/localtime:ro
       - $PWD/data/twikoo:/app/data
 
+  piclist:
+    image: 'kuingsmile/piclist:v1.7.0'
+    container_name: piclist
+    restart: always
+    networks:
+      blog_net:
+        ipv4_address: 172.19.0.5
+    volumes:
+      - '$PWD/data/piclist:/root/.piclist'
+    command: node /usr/local/bin/picgo-server -k qwe123!@#
+
 networks:
   blog_net:
     driver: bridge
