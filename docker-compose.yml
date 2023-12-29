@@ -59,7 +59,8 @@ services:
         ipv4_address: 172.19.0.5
     volumes:
       - '$PWD/data/piclist:/root/.piclist'
-    command: node /usr/local/bin/picgo-server -k qwe123!@#
+    # 需要设置 piclist_key 环境变量
+    command: node /usr/local/bin/picgo-server -k ${piclist_key}
 
 networks:
   blog_net:
