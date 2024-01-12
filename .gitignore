@@ -2,3 +2,5 @@ logs
 ssl
 data/hugo
 data/piclist
+data/alist/log
+data/alist/temp
