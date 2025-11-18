@@ -10,6 +10,6 @@ script_path=$(cd $(dirname ${0}); pwd)
 
 # 备份到github仓库
 cd ${script_path}
-/usr/bin/git add .
+/usr/bin/git add -A
 /usr/bin/git commit -m "backup files"
 repeat /usr/bin/git push origin main
