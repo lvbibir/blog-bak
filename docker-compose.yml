@@ -38,7 +38,7 @@ services:
       - $PWD/logs/hugo:/var/log/nginx
 
   twikoo:
-    image: imaegoo/twikoo:1.6.40
+    image: imaegoo/twikoo:1.6.44
     container_name: twikoo
     restart: always
     networks:
