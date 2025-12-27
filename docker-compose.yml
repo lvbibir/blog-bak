@@ -70,7 +70,7 @@ services:
       blog_net:
         ipv4_address: 172.19.0.6
     volumes:
-      - '/$PWD/data/alist:/opt/alist/data'
+      - '$PWD/data/alist:/opt/alist/data'
     environment:
       - PUID=0
       - PGID=0
@@ -93,8 +93,6 @@ services:
     networks:
       blog_net:
         ipv4_address: 172.19.0.8
-    links:
-      - busuanzi-redis
     depends_on:
       - busuanzi-redis
     environment:
