@@ -15,4 +15,4 @@ cd ${script_path}
 /usr/bin/git add -A
 /usr/bin/git commit -m "backup files"
 repeat /usr/bin/git push gitee main
-repeat /usr/bin/git push github main
+# repeat /usr/bin/git push github main
