@@ -1,8 +1,8 @@
 {
   "force": false,
-  "site_url": "https://www.lvbibir.cn/alist",
+  "site_url": "",
   "cdn": "",
-  "jwt_secret": "sgreekgpJc0fCtnX",
+  "jwt_secret": "WPbVRpo7o61wRfJn",
   "token_expires_in": 48,
   "database": {
     "type": "sqlite3",
