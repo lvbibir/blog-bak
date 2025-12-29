@@ -67,7 +67,7 @@ services:
     command: node /usr/local/bin/picgo-server -k ${piclist_key}
 
   alist:
-    image: xhofe/alist:v3.55.0
+    image: docker.1ms.run/xhofe/alist:v3.55.0
     container_name: alist
     restart: unless-stopped
     networks:
