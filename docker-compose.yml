@@ -52,19 +52,18 @@ services:
     volumes:
       - $PWD/data/twikoo:/app/data
 
-  alist:
-    image: docker.1ms.run/xhofe/alist:v3.55.0
-    container_name: alist
+  openlist:
+    image: docker.1ms.run/openlistteam/openlist:v4.1.9
+    container_name: openlist
+    user: '0:0'
     restart: unless-stopped
     networks:
       blog_net:
         ipv4_address: 172.19.0.6
     volumes:
-      - $PWD/data/alist:/opt/alist/data
+      - $PWD/data/openlist:/opt/openlist/data
     environment:
       TZ: Asia/Shanghai
-      PUID: 0
-      PGID: 0
       UMASK: '022'
 
   busuanzi-redis:

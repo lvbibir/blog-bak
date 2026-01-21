@@ -3,4 +3,5 @@ ssl
 data/hugo
 data/piclist
 data/alist
+data/openlist
 .env
