@@ -3,7 +3,7 @@ version: '3.8'
 services:
 
   nginx-proxy: # 前端代理nginx
-    image: superng6/nginx:debian-stable-1.18.0
+    image: docker.1ms.run/superng6/nginx:debian-stable-1.18.0
     container_name: nginx-proxy
     restart: unless-stopped
     networks:
@@ -25,7 +25,7 @@ services:
       - twikoo
 
   nginx-hugo:
-    image: superng6/nginx:debian-stable-1.18.0
+    image: docker.1ms.run/superng6/nginx:debian-stable-1.18.0
     container_name: nginx-hugo
     restart: unless-stopped
     networks:
@@ -40,7 +40,7 @@ services:
       - $PWD/logs/hugo:/var/log/nginx
 
   twikoo:
-    image: imaegoo/twikoo:1.6.44
+    image: docker.1ms.run/imaegoo/twikoo:1.7.7
     container_name: twikoo
     restart: unless-stopped
     networks:
@@ -53,7 +53,7 @@ services:
       - $PWD/data/twikoo:/app/data
 
   openlist:
-    image: docker.1ms.run/openlistteam/openlist:v4.1.9
+    image: docker.1ms.run/openlistteam/openlist:v4.2.1
     container_name: openlist
     user: '0:0'
     restart: unless-stopped
@@ -67,7 +67,7 @@ services:
       UMASK: '022'
 
   busuanzi-redis:
-    image: docker.1ms.run/library/redis:8.4.0-alpine3.22
+    image: docker.1ms.run/library/redis:8-alpine
     container_name: busuanzi-redis
     restart: unless-stopped
     networks:
